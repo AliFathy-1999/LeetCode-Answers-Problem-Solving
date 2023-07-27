@@ -21,7 +21,12 @@ var twoSum = function(nums, target) {
     }
     return twoSumArray
 };
-// Solution 2
+// Solution 2 Using Hash Map
+
+/*
+    Time complexity: O(n)
+    Space complexity: O(n)
+*/
 var twoSum = function(nums, target) {
     const numIndexMap = new Map(); 
     for (let i = 0; i < nums.length; i++) {
@@ -33,7 +38,6 @@ var twoSum = function(nums, target) {
         // If not, add the current element and its index to the hash map
         numIndexMap[nums[i]] = i;
     }
-    
     return []; 
 };
 console.log(twoSum(testCase1_array,testCase1_target));
